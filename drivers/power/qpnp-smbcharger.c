@@ -40,7 +40,13 @@
 #include <linux/msm_bcl.h>
 #include <linux/ktime.h>
 #include "pmic-voter.h"
-
+#include <linux/thermal.h>
+#include <linux/device.h>
+ 
+#ifdef CONFIG_FORCE_FAST_CHARGE
+#include <linux/fastcharge.h>
+#endif
+ 
 #ifdef CONFIG_MACH_XIAOMI_KENZO
 int FG_charger_status = 0;
 #endif
